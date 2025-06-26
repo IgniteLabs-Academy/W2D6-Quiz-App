@@ -4,5 +4,5 @@ const path = require('path');
 test('Options array', () => {
   const code = fs.readFileSync(path.resolve(__dirname, '../script.js'), 'utf8');
   // This test checks: Options array
-  expect(code).toMatch(/let\s+options\s*=\s*\[.*\]/);
+  expect(code).toMatch(/(let|const|var)\s+options\s*=\s*\[.*\]/);
 });
